@@ -9,7 +9,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class TestSaveMsgjy {
+public class TestNatju {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
@@ -23,7 +23,7 @@ public class TestSaveMsgjy {
   }
 
   @Test
-  public void testSaveMsgjy() throws Exception {
+  public void testNatju() throws Exception {
     driver.get(baseUrl + "/");
     driver.findElement(By.linkText("Log In")).click();
     driver.findElement(By.id("navbar_username")).clear();
@@ -33,23 +33,8 @@ public class TestSaveMsgjy {
     driver.findElement(By.cssSelector("input.button")).click();
     driver.findElement(By.linkText("Click here if your browser does not automatically redirect you.")).click();
     driver.findElement(By.linkText("1n50mniac")).click();
-    driver.findElement(By.linkText("Send Message")).click();
-    driver.findElement(By.linkText("Send a private message to 1n50mniac")).click();
-    driver.findElement(By.name("title")).clear();
-    driver.findElement(By.name("title")).sendKeys("test");
-    driver.findElement(By.id("vB_Editor_001_textarea")).clear();
-    driver.findElement(By.id("vB_Editor_001_textarea")).sendKeys("test123");
-    driver.findElement(By.id("vB_Editor_001_save")).click();
-    driver.findElement(By.id("checkall_all")).click();
-    new Select(driver.findElement(By.name("dowhat"))).selectByVisibleText("Delete");
-    driver.findElement(By.id("pm_inlinego")).click();
-    new Select(driver.findElement(By.name("folderid"))).selectByVisibleText("Sent Items (1 Messages)");
-    driver.findElement(By.cssSelector("td > input.button")).click();
-    driver.findElement(By.linkText("test")).click();
-    assertEquals("test123", driver.findElement(By.id("post_message_")).getText());
-    driver.findElement(By.linkText("Sent Items")).click();
-    driver.findElement(By.id("checkall_all")).click();
-    driver.findElement(By.id("pm_inlinego")).click();
+    driver.findElement(By.id("aboutme_tab")).click();
+    assertEquals("United States", driver.findElement(By.id("profilefield_value_6")).getText());
   }
 
   @After

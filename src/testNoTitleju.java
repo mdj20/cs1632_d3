@@ -1,4 +1,4 @@
-package com.example.tests;
+
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
@@ -9,7 +9,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class MsgSaveTest {
+public class testNoTitleju {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
@@ -23,7 +23,7 @@ public class MsgSaveTest {
   }
 
   @Test
-  public void testMsgSave() throws Exception {
+  public void testNoTitle() throws Exception {
     driver.get(baseUrl + "/");
     driver.findElement(By.linkText("Log In")).click();
     driver.findElement(By.id("navbar_username")).clear();
@@ -35,27 +35,8 @@ public class MsgSaveTest {
     driver.findElement(By.linkText("1n50mniac")).click();
     driver.findElement(By.linkText("Send Message")).click();
     driver.findElement(By.linkText("Send a private message to 1n50mniac")).click();
-    driver.findElement(By.name("title")).clear();
-    driver.findElement(By.name("title")).sendKeys("testing123");
-    driver.findElement(By.id("vB_Editor_001_textarea")).clear();
-    driver.findElement(By.id("vB_Editor_001_textarea")).sendKeys("welcome to test!");
     driver.findElement(By.id("vB_Editor_001_save")).click();
-    driver.findElement(By.linkText("Track Messages")).click();
-    driver.findElement(By.linkText("Your Control Panel")).click();
-    driver.findElement(By.id("nav_pmfolders")).click();
-    driver.findElement(By.linkText("Sent Items")).click();
-    driver.findElement(By.linkText("testing123")).click();
-    assertEquals("welcome to test!", driver.findElement(By.id("post_message_")).getText());
-    driver.findElement(By.linkText("Sent Items")).click();
-    driver.findElement(By.id("checkall_all")).click();
-    driver.findElement(By.id("pm_inlinego")).click();
-    driver.findElement(By.xpath("(//a[contains(text(),'Private Messages')])[2]")).click();
-    driver.findElement(By.id("checkall_all")).click();
-    new Select(driver.findElement(By.name("dowhat"))).selectByVisibleText("Delete");
-    driver.findElement(By.id("pm_inlinego")).click();
-    driver.findElement(By.linkText("Log Out 1n50mniac")).click();
-    assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to log out[\\s\\S]$"));
-    driver.findElement(By.cssSelector("img[alt=\"Myth-Weavers\"]")).click();
+    assertEquals("You must enter a title / subject!", closeAlertAndGetItsText());
   }
 
   @After

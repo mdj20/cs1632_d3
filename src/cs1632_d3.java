@@ -1,55 +1,47 @@
 
+
+
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.JUnitCore;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 
 
+/*
+ * 	Names : Matthew Jeffreys  ; Ryan R..  (don't know, sorry)
+ * 	
+ * 
+ * 
+ */
+
+
 
 
 public class cs1632_d3 {
-	
-	
-	static WebDriver webDriver = new HtmlUnitDriver();
-	
-	
-	
-	@Before
-	public static void setUp() throws Exception {
-		webDriver.get("http://www.myth-weavers.com");
-	}
-	
+
 	
 	
 	@Test
-	public static void test1() throws Exception {
-	
-		
-		WebDriver testDriver = new FirefoxDriver();
-		
-		//testDriver.
+	public static void main(String args ){
 		
 		
-		System.out.println("Hello World!");
+		JUnitCore junit = new JUnitCore();
+		
+		
+		
+		
+		
 		
 		
 		
 	}
-
 	
 	
 	
 	
-	
-	
-	
-
-	
-	
-	
-
 }
