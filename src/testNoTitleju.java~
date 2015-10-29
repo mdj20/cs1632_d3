@@ -1,13 +1,4 @@
-//package com.example.tests;
 
-/*
-
-	When I enter my Interests info
-	And someone views my profile
-	They should be able to see my Interests.
-
-
-*/
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
@@ -18,7 +9,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class testInterestsju {
+public class testNoTitleju {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
@@ -32,7 +23,7 @@ public class testInterestsju {
   }
 
   @Test
-  public void testInterests() throws Exception {
+  public void testNoTitle() throws Exception {
     driver.get(baseUrl + "/");
     driver.findElement(By.linkText("Log In")).click();
     driver.findElement(By.id("navbar_username")).clear();
@@ -42,8 +33,10 @@ public class testInterestsju {
     driver.findElement(By.cssSelector("input.button")).click();
     driver.findElement(By.linkText("Click here if your browser does not automatically redirect you.")).click();
     driver.findElement(By.linkText("1n50mniac")).click();
-    driver.findElement(By.id("aboutme_tab")).click();
-    assertEquals("Guess.", driver.findElement(By.id("profilefield_value_3")).getText());
+    driver.findElement(By.linkText("Send Message")).click();
+    driver.findElement(By.linkText("Send a private message to 1n50mniac")).click();
+    driver.findElement(By.id("vB_Editor_001_save")).click();
+    assertEquals("You must enter a title / subject!", closeAlertAndGetItsText());
   }
 
   @After

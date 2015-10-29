@@ -1,4 +1,11 @@
+/*
 
+
+
+When I am logged into my account
+And when I send a user a message
+I should be able to view sent message contents.
+*/
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;

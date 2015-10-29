@@ -1,5 +1,16 @@
 //package com.example.tests;
 
+/*
+
+	When I enter my Gender info
+	And someone views my profile
+	They should be able to see my Gender.
+
+
+
+
+*/
+
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;

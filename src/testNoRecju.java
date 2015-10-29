@@ -1,4 +1,11 @@
+/*
 
+When I send a user a message
+And I fail to enter a recipient 
+I should be prevented from doing so.
+
+
+*/
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;

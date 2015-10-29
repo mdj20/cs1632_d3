@@ -1,13 +1,4 @@
-//package com.example.tests;
 
-/*
-
-	When I enter my Interests info
-	And someone views my profile
-	They should be able to see my Interests.
-
-
-*/
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
@@ -18,7 +9,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class testInterestsju {
+public class testNatju {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
@@ -32,7 +23,7 @@ public class testInterestsju {
   }
 
   @Test
-  public void testInterests() throws Exception {
+  public void testNatju() throws Exception {
     driver.get(baseUrl + "/");
     driver.findElement(By.linkText("Log In")).click();
     driver.findElement(By.id("navbar_username")).clear();
@@ -43,7 +34,7 @@ public class testInterestsju {
     driver.findElement(By.linkText("Click here if your browser does not automatically redirect you.")).click();
     driver.findElement(By.linkText("1n50mniac")).click();
     driver.findElement(By.id("aboutme_tab")).click();
-    assertEquals("Guess.", driver.findElement(By.id("profilefield_value_3")).getText());
+    assertEquals("United States", driver.findElement(By.id("profilefield_value_6")).getText());
   }
 
   @After

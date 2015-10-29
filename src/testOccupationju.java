@@ -1,5 +1,17 @@
 //package com.example.tests;
 
+/*
+
+Matthew Jeffreys
+
+When I enter my occupation info
+And someone views my profile
+They should be able to see my Occupation.
+
+
+
+*/
+
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
