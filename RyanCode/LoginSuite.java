@@ -9,6 +9,12 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.support.ui.Select;
 
+/*
+AS a User
+I would like to Login to my account
+So that I can view my account information
+*/
+
 public class LoginSuite {
 	private WebDriver driver;
 	private String baseUrl;
@@ -22,6 +28,11 @@ public class LoginSuite {
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
+	/*
+	Given a correct user name and password
+	When I login
+	Then my credentials should be accepted
+	*/
 	@Test
 	public void testCorrectCorrect() throws Exception {
 	    driver.get(baseUrl + "/");
@@ -37,6 +48,12 @@ public class LoginSuite {
 	    driver.findElement(By.linkText("Go to forums index")).click();
 	}
 	
+	/*
+	Given a correct user name and incorrect password
+	When I login
+	Then my credentials should be rejected
+	*/
+	
 	@Test
 	public void testCorrectIncorrect() throws Exception {
 	    driver.get(baseUrl + "/");
@@ -50,6 +67,11 @@ public class LoginSuite {
 	    driver.findElement(By.cssSelector("img[alt=\"Myth-Weavers\"]")).click();
 	}
 	
+	/*
+	Given an incorrect user name and a correct password
+	When I login
+	Then my credentials should be rejected
+	*/
 	@Test
 	public void testIncorrectCorrect() throws Exception {
 	    driver.get(baseUrl + "/");
@@ -63,6 +85,11 @@ public class LoginSuite {
 	    driver.findElement(By.cssSelector("img[alt=\"Myth-Weavers\"]")).click();
 	}
 	
+	/*
+	Given an incorrect user name and password
+	When I login 
+	Then my credentials should be rejected
+	*/
 	@Test
 	public void testIncorrectIncorrect() throws Exception {
 	    driver.get(baseUrl + "/");
