@@ -59,31 +59,16 @@
 <tr>
 	<td>type</td>
 	<td>name=title</td>
-	<td>test</td>
+	<td>testing123</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=vB_Editor_001_textarea</td>
-	<td>test123</td>
+	<td>test</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
 	<td>id=vB_Editor_001_save</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=checkall_all</td>
-	<td></td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>name=dowhat</td>
-	<td>label=Delete</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=pm_inlinego</td>
 	<td></td>
 </tr>
 <tr>
@@ -98,13 +83,13 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=test</td>
+	<td>link=testing123</td>
 	<td></td>
 </tr>
 <tr>
 	<td>assertText</td>
 	<td>id=post_message_</td>
-	<td>test123</td>
+	<td>test</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -115,6 +100,26 @@
 	<td>click</td>
 	<td>id=checkall_all</td>
 	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=pm_inlinego</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>name=folderid</td>
+	<td>label=Inbox (1 Messages)</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=checkall_all</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=dowhat</td>
+	<td>label=Delete</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>

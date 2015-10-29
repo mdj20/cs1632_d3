@@ -52,16 +52,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>link=Send Message</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=Send Message</td>
-	<td></td>
-</tr>
-<tr>
 	<td>clickAndWait</td>
 	<td>link=Send a private message to 1n50mniac</td>
 	<td></td>
@@ -69,26 +59,16 @@
 <tr>
 	<td>type</td>
 	<td>name=title</td>
-	<td>Test</td>
+	<td>test</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=vB_Editor_001_textarea</td>
-	<td>Hello World</td>
+	<td>test</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
 	<td>id=vB_Editor_001_save</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=img.inline</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=Unread Private Messages</td>
 	<td></td>
 </tr>
 <tr>
@@ -99,16 +79,11 @@
 <tr>
 	<td>assertText</td>
 	<td>id=post_message_</td>
-	<td>Hello World</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=img.inline</td>
-	<td></td>
+	<td>test</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Unread Private Messages</td>
+	<td>xpath=(//a[contains(text(),'Private Messages')])[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -130,6 +105,11 @@
 	<td>selectAndWait</td>
 	<td>name=folderid</td>
 	<td>label=Sent Items (1 Messages)</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>1000</td>
 </tr>
 <tr>
 	<td>click</td>

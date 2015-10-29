@@ -4,12 +4,12 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://www.myth-weavers.com/" />
-<title>MsgSaveTest</title>
+<title>testNoTitle</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">MsgSaveTest</td></tr>
+<tr><td rowspan="1" colspan="3">testNoTitle</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
@@ -57,85 +57,16 @@
 	<td></td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>name=title</td>
-	<td>testing123</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=vB_Editor_001_textarea</td>
-	<td>welcome to test!</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
+	<td>click</td>
 	<td>id=vB_Editor_001_save</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=Track Messages</td>
+	<td>assertAlert</td>
+	<td>You must enter a title / subject!</td>
 	<td></td>
 </tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=Your Control Panel</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=nav_pmfolders</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=Sent Items</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=testing123</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>id=post_message_</td>
-	<td>welcome to test!</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=Sent Items</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=checkall_all</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=pm_inlinego</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>xpath=(//a[contains(text(),'Private Messages')])[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=checkall_all</td>
-	<td></td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>name=dowhat</td>
-	<td>label=Delete</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=pm_inlinego</td>
-	<td></td>
-</tr>
+
 </tbody></table>
 </body>
 </html>
